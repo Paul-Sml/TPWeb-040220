@@ -30,7 +30,6 @@ function init(){
 }
 
 function preload(){
-	this.load.image('background','assets/sky.png');	
 	this.load.image('fond','assets/fond.png');
 	this.load.image('etoile','assets/star.png');
 	this.load.image('sol','assets/platform.png');
@@ -102,7 +101,10 @@ function update(){
 	
 	if(cursors.up.isDown && player.body.touching.down){
 		player.setVelocityY(-330);
-	} 
+	}/* else if(cursors.up.isDown && player.body.velocity.y>-100){
+		player.setVelocityY(-330)
+	}*/
+
 	
 }
 function hitBomb(player, bomb){
