@@ -40,12 +40,16 @@ function preload(){
 
 
 function create(){
-	this.add.image(400,300,'background');
+	this.add.image(400,300,'fond');
 
 	platforms = this.physics.add.staticGroup();
-	platforms.create(400,568,'sol').setScale(2).refreshBody();
-	platforms.create(600,400,'sol');
-	platforms.create(50,250,'sol');
+	platforms.create(400,590,'sol');
+	platforms.create(600,500,'sol');
+	platforms.create(100,500,'sol');
+	platforms.create(50,270,'sol');
+	platforms.create(380,380,'sol');
+	platforms.create(600,260,'sol');
+	platforms.create(450,150,'sol');
 	
 	player = this.physics.add.sprite(100,450,'perso');
 	player.setCollideWorldBounds(true);
